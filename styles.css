@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    background-color: #000000;
+    color: #d4d4d4;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cv-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 40px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Section (Left Sidebar) */
+.profile-section {
+    width: 300px;
+    background-color: #252526;
+    padding: 30px 20px;
+    border-right: 1px solid #3e3e42;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    color: #dcdcaa;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.enum-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #4ec9b0;
+}
+
+.section-content {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.summary {
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.comment {
+    color: #6a9955;
+    display: block;
+}
+
+.code-section {
+    margin-bottom: 30px;
+}
+
+.code-line {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.code-block {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.indent-2 {
+    padding-left: 40px;
+}
+
+/* Syntax Highlighting */
+.keyword {
+    color: #569cd6;
+    font-weight: 500;
+}
+
+.type {
+    color: #4ec9b0;
+    font-weight: 500;
+}
+
+.class-name {
+    color: #4ec9b0;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.number {
+    color: #b5cea8;
+}
+
+.variable {
+    color: #9cdcfe;
+}
+
+.property {
+    color: #9cdcfe;
+}
+
+.function {
+    color: #dcdcaa;
+}
+
+.boolean {
+    color: #569cd6;
+}
+
+.operator {
+    color: #d4d4d4;
+}
+
+.punctuation {
+    color: #d4d4d4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.code-section {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.code-section:nth-child(1) { animation-delay: 0.1s; }
+.code-section:nth-child(2) { animation-delay: 0.2s; }
+.code-section:nth-child(3) { animation-delay: 0.3s; }
+.code-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cv-card {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #3e3e42;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .code-line, .code-block {
+        font-size: 12px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4e4e4e;
+}
+
+/* Hover Effects */
+.code-line {
+    transition: all 0.3s ease;
+    padding: 8px 10px;
+    margin: -8px -10px;
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+}
+
+.code-line:hover {
+    background-color: #2a2d2e;
+    border-left-color: #4ec9b0;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.section {
+    transition: all 0.3s ease;
+    padding: 8px;
+    margin: -8px;
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+}
+
+.section:hover {
+    background-color: #2a2d2e;
+    border-left-color: #569cd6;
+    transform: translateX(3px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.code-block.indent,
+.code-block.indent-2 {
+    transition: all 0.3s ease;
+}
+
+.code-section:hover .code-block {
+    background-color: rgba(42, 45, 46, 0.3);
+    border-radius: 4px;
+}
+
+/* Individual line hover in code blocks */
+.code-block > div {
+    transition: all 0.2s ease;
+    padding: 2px 8px;
+    margin: -2px -8px;
+    border-radius: 3px;
+}
+
+.code-block > div:hover {
+    background-color: #2a2d2e;
+    transform: translateX(3px);
+}
+
+/* Profile image hover */
+.profile-img {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: #4ec9b0;
+    box-shadow: 0 4px 12px rgba(78, 201, 176, 0.3);
+}
+
+/* Sidebar sections enhanced hover */
+.section-content > div {
+    transition: all 0.2s ease;
+    padding: 3px 6px;
+    margin: -3px -6px;
+    border-radius: 3px;
+}
+
+.section-content > div:hover {
+    background-color: #3e3e42;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Summary hover effect */
+.summary .comment {
+    transition: all 0.2s ease;
+    padding: 3px 8px;
+    margin: -3px -8px;
+    border-radius: 3px;
+    border-left: 3px solid transparent;
+}
+
+.summary .comment:hover {
+    background-color: #2a2d2e;
+    border-left-color: #6a9955;
+    transform: translateX(5px);
+    color: #7cb668;
+}
+
+/* Keyword and type highlighting on hover */
+.keyword:hover {
+    color: #6eb3f0;
+    text-shadow: 0 0 8px rgba(86, 156, 214, 0.5);
+    cursor: default;
+}
+
+.type:hover {
+    color: #5edec7;
+    text-shadow: 0 0 8px rgba(78, 201, 176, 0.5);
+    cursor: default;
+}
+
+.string:hover {
+    color: #e8b390;
+    text-shadow: 0 0 8px rgba(206, 145, 120, 0.4);
+    cursor: default;
+}
+
+.variable:hover,
+.property:hover {
+    color: #b3ecff;
+    text-shadow: 0 0 8px rgba(156, 220, 254, 0.4);
+    cursor: default;
+}
+
+.function:hover {
+    color: #f0e68c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Profile section title glow */
+.section-title {
+    transition: all 0.3s ease;
+}
+
+.section:hover .section-title {
+    color: #f0e68c;
+    text-shadow: 0 0 10px rgba(220, 220, 170, 0.7);
+}
+
+.enum-title {
+    transition: all 0.3s ease;
+}
+
+.section:hover .enum-title {
+    color: #5edec7;
+    text-shadow: 0 0 10px rgba(78, 201, 176, 0.6);
+}
+
+/* LinkedIn Link Styling */
+.linkedin-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.linkedin-link:hover {
+    transform: translateX(5px);
+}
+
+.linkedin-link:hover .string {
+    color: #4a9eff;
+    text-shadow: 0 0 10px rgba(74, 158, 255, 0.6);
+}
+
+.linkedin-link::before {
+    content: "🔗 ";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    left: -25px;
+}
+
+.linkedin-link:hover::before {
+    opacity: 1;
+}
+
