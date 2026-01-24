@@ -1,0 +1,43 @@
+- company: "Alza.cz"
+  role: "Engineering & Line Manager, ERP"
+  location: "Prague, Czechia"
+  duration:
+    start: "February 2024"
+    end: "Present"
+  highlights:
+    - "Built an engineering team for the after-sales domain, with a self-organizing culture and development workflows from scratch."
+    - "Improved Agile and DevOps practices across assigned team portfolio, ensuring technical capacity, recruitment, cross-functional communication with Business and Platform teams, and established relevant KPIs."
+    - "Leading a .NET Backend Guild, promoting knowledge sharing, and best practices among developers."
+    - "Championing AI adoption within the company, driving awareness and implementation of GenAI/ML solutions (agentic flows, MCPs, KG), founding member of the AI guild."
+    - "Authored the integration of LLMs into the company's warranty claims process, improving automation, accuracy, and CX."
+    - "Organized the company’s first AI hackathon, enabling innovation and hands-on experimentation."
+    - "Designed a dual-track career path initiative for software developers, focusing on growth and retention."
+
+- company: "Capgemini"
+  role: "IT Project Manager & Agile Team Leader"
+  location: "Berlin, Germany"
+  duration:
+    start: "March 2017"
+    end: "January 2024"
+  highlights:
+    - "Managed diverse onshore and offshore software engineering teams, with full accountability for delivering a wide range of projects primarily in the automotive and banking sector."
+    - "Led the transition of 3 teams from waterfall to agile practice, including customer onboarding and overcoming resistance, achieving a 30% improvement in time-to-market and accelerated cash flow."
+    - "Successfully expanded engineering teams from 13 to 25 members over 2 years, scaling to meet customer delivery demands while maintaining high performance standards."
+    - "Enhanced collaboration across multicultural teams in Germany, India, and Poland, streamlining workflows and increasing team retention by 50% compared to the program average."
+    - "Managed a portfolio of projects with a combined annual turnover exceeding 5M EUR, consistently delivering contribution margins 4-6% above targets."
+
+- company: "NCR Corporation"
+  role: "PS Project Manager"
+  location: "Prague, Czechia"
+  duration:
+    start: "March 2015"
+    end: "February 2017"
+  highlights: []
+
+- company: "Capgemini"
+  role: "IT Consultant, MES Rollout"
+  location: "Puebla, Mexico"
+  duration:
+    start: "February 2013"
+    end: "February 2015"
+  highlights: []
