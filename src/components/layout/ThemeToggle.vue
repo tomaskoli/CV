@@ -32,10 +32,10 @@ const printCV = () => {
     <button 
       class="theme-toggle" 
       @click="toggleTheme"
-      :title="isDeveloper ? 'Switch to Corporate Style' : 'Switch to Developer Style'"
+      :title="isDeveloper ? 'Switch to Clean Theme' : 'Switch to Dev Theme'"
     >
-      <span class="icon">{{ isDeveloper ? '&lt;/&gt;' : '📊' }}</span>
-      <span class="label">{{ isDeveloper ? 'Switch to Corporate Style' : 'Switch to Developer Style' }}</span>
+      <span class="icon">{{ isDeveloper ? '🗎' : '&lt;/&gt;' }}</span>
+      <span class="label">{{ isDeveloper ? 'Switch to Clean Theme' : 'Switch to Dev Theme' }}</span>
     </button>
   </div>
 </template>
