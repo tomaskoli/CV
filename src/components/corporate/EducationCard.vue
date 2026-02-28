@@ -4,13 +4,26 @@ import type { Education } from '@/types/cv';
 defineProps<{
   education: Education;
 }>();
+
+const displayUrl = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 </script>
 
 <template>
   <div class="education-card">
     <div class="content">
       <h3 class="institution">{{ education.institution }}</h3>
-      <p class="degree">{{ education.degree }}</p>
+      <p class="degree">
+        {{ education.degree }}
+        <a
+          v-if="education.thesisUrl"
+          :href="education.thesisUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="thesis-link"
+        >
+          ({{ displayUrl(education.thesisUrl) }})
+        </a>
+      </p>
       <p class="field">{{ education.field }}</p>
       <span class="date">{{ education.graduationDate }}</span>
     </div>
@@ -59,5 +72,16 @@ defineProps<{
 .date {
   font-size: 12px;
   color: var(--text-muted);
+}
+
+.thesis-link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.thesis-link:hover {
+  text-decoration: underline;
 }
 </style>

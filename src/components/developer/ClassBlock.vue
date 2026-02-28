@@ -12,6 +12,7 @@ defineProps<{
     type: string;
     name: string;
     value: string | string[];
+    href?: string;
   }>;
   comments?: string[];
 }>();
@@ -26,7 +27,7 @@ defineProps<{
       <div class="brace">{</div>
       <div class="class-content">
         <div v-for="(prop, index) in properties" :key="index" class="property-line">
-          <Keyword :text="`public ${prop.type}`" />&nbsp;<Property :name="prop.name" /> = <template v-if="Array.isArray(prop.value)"><Keyword text="new" />[] { <span v-for="(v, i) in prop.value" :key="i"><StringValue :text="v" /><span v-if="i < prop.value.length - 1">, </span></span> }</template><template v-else-if="prop.type === 'DateRange'"><Keyword text="new" />(<StringValue :text="prop.value.split('|')[0]" />, <StringValue :text="prop.value.split('|')[1]" />)</template><StringValue v-else :text="String(prop.value)" />;
+          <Keyword :text="`public ${prop.type}`" />&nbsp;<Property :name="prop.name" /> = <template v-if="Array.isArray(prop.value)"><Keyword text="new" />[] { <span v-for="(v, i) in prop.value" :key="i"><StringValue :text="v" /><span v-if="i < prop.value.length - 1">, </span></span> }</template><template v-else-if="prop.type === 'DateRange'"><Keyword text="new" />(<StringValue :text="prop.value.split('|')[0]" />, <StringValue :text="prop.value.split('|')[1]" />)</template><template v-else-if="prop.href"><a :href="prop.href" target="_blank" rel="noopener noreferrer" class="link"><StringValue :text="String(prop.value)" /></a></template><StringValue v-else :text="String(prop.value)" />;
         </div>
         
         <template v-if="comments && comments.length > 0">
@@ -106,6 +107,15 @@ defineProps<{
 .property-line:hover {
   background-color: var(--bg-hover);
   transform: translateX(3px);
+}
+
+.link {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  filter: brightness(1.2);
 }
 
 .comments-section {

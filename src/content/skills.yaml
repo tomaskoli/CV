@@ -7,7 +7,7 @@ profile:
   - "DevOps"
   - "GitOps"
   - "AI/ML Workflows"
-  - "Microservice patterns (Saga, CQRS, Outbox)"
+  - "Event-driven patterns (Saga, CQRS, Outbox)"
   - "DDD"
 
 technologies:
@@ -40,7 +40,7 @@ tools:
   - "Visual Studio"
   - "Cursor"
   - "Eclipse"
-  - "CLion"
+  - "PyCharm"
   - "Postman"
   - "n8n"
 

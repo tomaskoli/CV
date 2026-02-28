@@ -23,6 +23,7 @@ export interface Experience {
 export interface Education {
   institution: string;
   degree: string;
+  thesisUrl?: string;
   field: string;
   graduationDate: string;
 }
