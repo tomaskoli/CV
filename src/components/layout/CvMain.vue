@@ -71,6 +71,7 @@ const displayUrl = (url: string) => {
           :properties="[
             { type: 'string', name: 'Degree', value: edu.degree },
             { type: 'string', name: 'Field', value: edu.field },
+             ...(edu.thesisUrl ? [{ type: 'Uri', name: 'Thesis', value: displayUrl(edu.thesisUrl), href: edu.thesisUrl }] : []),
             { type: 'DateRange', name: 'Graduation', value: edu.graduationDate.replace(' - ', '|') },
             { type: 'string', name: 'University', value: edu.institution }
           ]"
