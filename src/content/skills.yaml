@@ -20,8 +20,8 @@ technologies:
   - "Kafka"
   - "REST API"
   - "GraphQL"
-  - "Semantic Kernel"
-  - "Google ADK/A2A"
+  - "Apache Spark"
+  - "Agent ADKs"
   - "Vector & Graph RAG"
 
 tools:
@@ -40,7 +40,6 @@ tools:
   - "Visual Studio"
   - "Cursor"
   - "Eclipse"
-  - "PyCharm"
   - "Postman"
   - "n8n"
 
